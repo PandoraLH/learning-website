@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICONS -->
+    <script
+      src="https://kit.fontawesome.com/6f3103b13c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pomodoro-container">
+        <h1>Timing</h1>
+
+        <div class="painel">
+          <p id="work">work</p>
+          <p id="break">break</p>
+        </div>
+
+        <div class="timer">
+          <div class="circle">
+            <div class="time">
+              <p id="minutes"></p>
+              <p>:</p>
+              <p id="seconds"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-promodo">
+          <div class = 'trigger'>
+            <button id="start" onclick="start()">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <a id="reset" href="./"
+              ><i class="fa-solid fa-arrow-rotate-left"></i
+            ></a>
+          </div>
+          <div class = 'settings-time'>
+            <button id = 'settings-time' onclick = "settings()">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+          </div>
+        </div>
+        <!-- <div id = 'popup' class = "popup-container">
+          <div class = "settings-panel">
+            <a href="#" class="close">&times;</a>
+            <h1>Enter Your Own Timing</h1>
+            <div class = 'input-time'>
+              <input type = "text" placeholder ="Work Time"/>
+              <input type = "text" placeholder = "Break Time" />
+            </div>
+            <button id = 'ok-button' onClick = "close"></button>
+          </div>
+        </div> -->
+
+      </div>
+      <div class="right-container">
+
+        <div class="todo-container">
+          <div class="task-input">
+            <i class="fa-solid fa-list fa-lg"></i>
+            <input type="text" placeholder="Add a new task" />
+          </div>
+
+          <div class="controls-todo">
+            <div class="filters">
+              <span class="active" id="all">All</span>
+              <span id="pending">Pending</span>
+              <span id="completed">Completed</span>
+            </div>
+            <button class="clear-btn">Clear All</button>
+          </div>
+          <ul class="task-box"></ul>
+        </div>
+
+        <div class="music-container" id="music-container">
+          <div class="music-info">
+            <h4 id="title"></h4>
+            <div class="progress-container" id="progress-container">
+              <div class="progress" id="progress"></div>
+            </div>
+          </div>
+
+          <audio src="music/ukulele.mp3" id="audio"></audio>
+
+          <div class="img-container">
+            <img src="images/chill.jpg" alt="music-cover" id="cover" />
+          </div>
+          <div class="navigation">
+            <button id="prev" class="action-btn">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="./script.js"></script>
+  </body>
+</html>
