@@ -1,6 +1,7 @@
 // variables
 let workTittle = document.getElementById("work");
 let breakTittle = document.getElementById("break");
+// let settings = document.getElementById("settings-time")
 
 let workTime = 25;
 let breakTime = 5;
@@ -9,9 +10,11 @@ let seconds = "00";
 
 // display
 window.onload = () => {
-  document.getElementById("minutes").innerHTML = workTime;
-  document.getElementById("seconds").innerHTML = seconds;
-
+  let timetag = "";
+  timetag += `<p id="minutes">${workTime}</p>
+                  <p>:</p>
+                  <p id="seconds">${seconds}</p>`;
+  document.querySelector(".time").innerHTML = timetag;
   workTittle.classList.add("active");
 };
 
